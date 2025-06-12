@@ -7,7 +7,7 @@ const pages = [
     `<div class='magazine-page portada'>
         <h1>Raíces y Futuro</h1>
         <h2>Diversidad Cultural y Participación Ciudadana en el Estado de México</h2>
-        <img src='IMG/frame.png' alt='Código QR' width='90' height='90' style='margin: 24px auto;'>
+        <img src='frame.png' alt='Código QR' width='90' height='90' style='margin: 24px auto;'>
         <p class='subtitle'>Revista Digital de Ciencias Sociales II</p>
         <hr style="border: none; border-top: 2px solid #fff; width: 60%; margin: 2em auto 1em auto;">
         <p style="font-size:1.1em; font-style:italic; margin-top:1.5em;">"La diversidad cultural es la riqueza de los pueblos, el puente entre el pasado y el futuro."</p>
@@ -19,15 +19,15 @@ const pages = [
         <p style="font-size:1.1em;">Explora la riqueza cultural de los pueblos originarios y afrodescendientes en el Estado de México, con especial enfoque en Jilotepec. Descubre cómo la democracia participativa y la ciudadanía activa están transformando nuestras comunidades.</p>
         <div style='display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin:2em 0;'>
             <div style="background:#f7faff;border-radius:10px;padding:10px 8px;box-shadow:0 1px 6px rgba(44,62,80,0.08);width:130px;">
-                <img src='IMG/1.jpg' alt='Cultura Indígena' style='width:100%;border-radius:8px;'>
+                <img src='1.jpg' alt='Cultura Indígena' style='width:100%;border-radius:8px;'>
                 <div style='text-align:center;font-size:0.95em;margin-top:0.5em;'>Diversidad cultural</div>
             </div>
             <div style="background:#f7faff;border-radius:10px;padding:10px 8px;box-shadow:0 1px 6px rgba(44,62,80,0.08);width:130px;">
-                <img src='IMG/tradiciones.jpg' alt='Tradiciones' style='width:100%;border-radius:8px;'>
+                <img src='tradiciones.jpg' alt='Tradiciones' style='width:100%;border-radius:8px;'>
                 <div style='text-align:center;font-size:0.95em;margin-top:0.5em;'>Tradiciones y costumbres</div>
             </div>
             <div style="background:#f7faff;border-radius:10px;padding:10px 8px;box-shadow:0 1px 6px rgba(44,62,80,0.08);width:130px;">
-                <img src='IMG/participacionciudadana.webp' alt='Participación Ciudadana' style='width:100%;border-radius:8px;'>
+                <img src='participacionciudadana.webp' alt='Participación Ciudadana' style='width:100%;border-radius:8px;'>
                 <div style='text-align:center;font-size:0.95em;margin-top:0.5em;'>Participación ciudadana</div>
             </div>
         </div>
@@ -87,7 +87,7 @@ const pages = [
     // Otomíes
     `<div class='magazine-page'>
         <h3>🧑‍🌾 Otomíes (Hñahñú)</h3>
-        <img src='IMG/comunidad_otomi.jpg' alt='Comunidad Otomí'>
+        <img src='comunidad_otomi.jpg' alt='Comunidad Otomí'>
         <p>Los otomíes, que se autodenominan Hñahñú, son uno de los pueblos indígenas más numerosos del Estado de México. Su lengua pertenece a la familia otomangue y cuenta con variantes dialectales.</p>
         <h4>Historia y presencia</h4>
         <p>Los otomíes han habitado el altiplano central desde tiempos prehispánicos. Fueron aliados y rivales de los mexicas y participaron en la defensa de sus territorios durante la conquista. Hoy, su presencia es fuerte en Temoaya, Acambay, Jilotepec y Villa del Carbón.</p>
@@ -112,7 +112,7 @@ const pages = [
     // Nahuas
     `<div class='magazine-page'>
         <h3>🌄 Nahuas</h3>
-        <img src='IMG/comunidad_nahua.jpg' alt='Comunidad Nahua'>
+        <img src='comunidad_nahua.jpg' alt='Comunidad Nahua'>
         <p>Los nahuas son descendientes directos de los mexicas y otros pueblos que hablaban náhuatl en el período prehispánico. Su lengua, el náhuatl, es la indígena con más hablantes en México.</p>
         <h4>Historia y presencia</h4>
         <p>Los nahuas han sido protagonistas de la historia de México desde la época mexica. En el Estado de México, su presencia se concentra en Texcoco, Chimalhuacán, Valle de Chalco y zonas rurales de Jilotepec.</p>
@@ -137,7 +137,7 @@ const pages = [
     // Mazahuas
     `<div class='magazine-page'>
         <h3>🧵 Mazahuas</h3>
-        <img src='IMG/comunidad_mazahua.webp' alt='Comunidad Mazahua'>
+        <img src='comunidad_mazahua.webp' alt='Comunidad Mazahua'>
         <p>Los mazahuas son un pueblo indígena cuya lengua pertenece a la familia otomangue. Son conocidos por su rica tradición textil y su profunda conexión con la tierra.</p>
         <h4>Historia y presencia</h4>
         <p>Los mazahuas han habitado la región noroccidental del Estado de México desde tiempos ancestrales. Su cultura se ha enriquecido con influencias purépechas y otomíes.</p>
@@ -179,7 +179,7 @@ const pages = [
     // Afrodescendientes: Presencia
     `<div class='magazine-page'>
         <h3>Presencia Afrodescendiente</h3>
-        <img src='IMG/comunidad_afro.avif' alt='Comunidad Afrodescendiente'>
+        <img src='comunidad_afro.avif' alt='Comunidad Afrodescendiente'>
         <p>Según el INEGI, en el Estado de México hay aproximadamente <b>150,000 personas</b> que se reconocen como afrodescendientes, principalmente en municipios como Cuautla y algunas zonas de Puebla cercanas al estado.</p>
         <div style="margin-top:1.2em;">
             <b>Principales aportaciones:</b>
@@ -241,12 +241,12 @@ const pages = [
         <h3>💃 Danzas Tradicionales</h3>
         <div class='card-container'>
             <div class='card'>
-                <img src='IMG/danza_concheros.jpg' alt='Danza de los Concheros'>
+                <img src='danza_concheros.jpg' alt='Danza de los Concheros'>
                 <h4>Danza de los Concheros</h4>
                 <p>Practicada por comunidades otomíes y mazahuas, esta danza ritual combina elementos prehispánicos y cristianos. Los danzantes usan trajes elaborados y se acompañan con instrumentos de cuerda hechos con caparazones de armadillo. La danza es una ofrenda a la tierra y a los antepasados.</p>
             </div>
             <div class='card'>
-                <img src='IMG/danza_arcos.jpg' alt='Danza de los Arcos'>
+                <img src='danza_arcos.jpg' alt='Danza de los Arcos'>
                 <h4>Danza de los Arcos</h4>
                 <p>Característica de las fiestas patronales en Jilotepec, donde los danzantes tejen y destejen figuras con arcos floridos mientras avanzan al ritmo de la música. Simboliza la unión comunitaria y la alegría colectiva. Los arcos representan la fertilidad y la abundancia.</p>
             </div>
@@ -261,15 +261,15 @@ const pages = [
         <h3>👗 Vestimenta Típica</h3>
         <div style='display:flex;gap:18px;flex-wrap:wrap;justify-content:center;'>
             <div style="background:#f7faff;border-radius:10px;padding:10px 8px;box-shadow:0 1px 6px rgba(44,62,80,0.08);width:120px;">
-                <img src='IMG/mujer_mazahua.jpg' alt='Mujer Mazahua' style='width:100%;border-radius:8px;'>
+                <img src='mujer_mazahua.jpg' alt='Mujer Mazahua' style='width:100%;border-radius:8px;'>
                 <div style='text-align:center;font-size:0.95em;margin-top:0.5em;'>Vestimenta Mazahua</div>
             </div>
             <div style="background:#f7faff;border-radius:10px;padding:10px 8px;box-shadow:0 1px 6px rgba(44,62,80,0.08);width:120px;">
-                <img src='IMG/hombre_otomi.avif' alt='Hombre Otomí' style='width:100%;border-radius:8px;'>
+                <img src='hombre_otomi.avif' alt='Hombre Otomí' style='width:100%;border-radius:8px;'>
                 <div style='text-align:center;font-size:0.95em;margin-top:0.5em;'>Vestimenta Otomí</div>
             </div>
             <div style="background:#f7faff;border-radius:10px;padding:10px 8px;box-shadow:0 1px 6px rgba(44,62,80,0.08);width:120px;">
-                <img src='IMG/bordados_tradicionales.jpg' alt='Bordados Tradicionales' style='width:100%;border-radius:8px;'>
+                <img src='bordados_tradicionales.jpg' alt='Bordados Tradicionales' style='width:100%;border-radius:8px;'>
                 <div style='text-align:center;font-size:0.95em;margin-top:0.5em;'>Bordados Tradicionales</div>
             </div>
         </div>
@@ -327,12 +327,12 @@ const pages = [
     // Democracia Participativa - Ejemplos visuales
     `<div class='magazine-page'>
         <div class='card-container'>
-            <div class='card'><img src='IMG/comites_vecinales.jpg' alt='Comités Vecinales'><h4>Comités Vecinales</h4><p>Organizaciones de base donde los residentes discuten y priorizan necesidades de su colonia o comunidad. Fomentan la solidaridad y la cooperación. Ejemplo: el comité de San Lorenzo logró instalar alumbrado público en su calle.</p></div>
-            <div class='card'><img src='IMG/presupuesto_par.webp' alt='Presupuesto Participativo'><h4>Presupuesto Participativo</h4><p>Proceso mediante el cual los ciudadanos deciden directamente cómo asignar parte del presupuesto público. Ejemplo: elegir entre pavimentar calles o mejorar la escuela.</p></div>
-            <div class='card'><img src='IMG/asambleas.webp' alt='Asambleas Comunitarias'><h4>Asambleas Comunitarias</h4><p>Reuniones donde todos los miembros de una comunidad pueden expresar su opinión y votar sobre temas relevantes. Son la base de la democracia directa. En Jilotepec, las asambleas se realizan cada mes.</p></div>
-            <div class='card'><img src='IMG/jornada_limpieza.jpg' alt='Jornadas de Limpieza'><h4>Jornadas Comunitarias</h4><p>Acciones colectivas para mejorar el entorno, como limpieza, reforestación o mantenimiento de espacios públicos. Fortalecen el sentido de pertenencia. Los niños participan plantando árboles.</p></div>
-            <div class='card'><img src='IMG/consultas.jpg' alt='Consultas Ciudadanas'><h4>Consultas Ciudadanas</h4><p>Mecanismos formales donde los ciudadanos pueden votar y opinar sobre proyectos específicos que impactan a su comunidad. Ejemplo: consulta para elegir el nombre de una nueva calle.</p></div>
-            <div class='card'><img src='IMG/consejos.jpg' alt='Consejos Ciudadanos'><h4>Consejos Ciudadanos</h4><p>Órganos consultivos formados por vecinos que supervisan y asesoran en la implementación de políticas públicas locales. En Jilotepec, el consejo ciudadano revisa el presupuesto municipal.</p></div>
+            <div class='card'><img src='comites_vecinales.jpg' alt='Comités Vecinales'><h4>Comités Vecinales</h4><p>Organizaciones de base donde los residentes discuten y priorizan necesidades de su colonia o comunidad. Fomentan la solidaridad y la cooperación. Ejemplo: el comité de San Lorenzo logró instalar alumbrado público en su calle.</p></div>
+            <div class='card'><img src='presupuesto_par.webp' alt='Presupuesto Participativo'><h4>Presupuesto Participativo</h4><p>Proceso mediante el cual los ciudadanos deciden directamente cómo asignar parte del presupuesto público. Ejemplo: elegir entre pavimentar calles o mejorar la escuela.</p></div>
+            <div class='card'><img src='asambleas.webp' alt='Asambleas Comunitarias'><h4>Asambleas Comunitarias</h4><p>Reuniones donde todos los miembros de una comunidad pueden expresar su opinión y votar sobre temas relevantes. Son la base de la democracia directa. En Jilotepec, las asambleas se realizan cada mes.</p></div>
+            <div class='card'><img src='jornada_limpieza.jpg' alt='Jornadas de Limpieza'><h4>Jornadas Comunitarias</h4><p>Acciones colectivas para mejorar el entorno, como limpieza, reforestación o mantenimiento de espacios públicos. Fortalecen el sentido de pertenencia. Los niños participan plantando árboles.</p></div>
+            <div class='card'><img src='consultas.jpg' alt='Consultas Ciudadanas'><h4>Consultas Ciudadanas</h4><p>Mecanismos formales donde los ciudadanos pueden votar y opinar sobre proyectos específicos que impactan a su comunidad. Ejemplo: consulta para elegir el nombre de una nueva calle.</p></div>
+            <div class='card'><img src='consejos.jpg' alt='Consejos Ciudadanos'><h4>Consejos Ciudadanos</h4><p>Órganos consultivos formados por vecinos que supervisan y asesoran en la implementación de políticas públicas locales. En Jilotepec, el consejo ciudadano revisa el presupuesto municipal.</p></div>
         </div>
     </div>`,
     // Caso: San Lorenzo Oltepec
@@ -376,9 +376,9 @@ const pages = [
     `<div class='magazine-page'>
         <h3>Ejemplos en Jilotepec</h3>
         <div class='card-container'>
-            <div class='card'><img src='IMG/consejo_j.webp' alt='Consejo Juvenil'><h4>Consejo Juvenil Municipal</h4><p>Espacio donde jóvenes de 15 a 29 años proponen proyectos e inciden en políticas públicas locales. En 2023 lograron la creación de un centro cultural juvenil y la organización de ferias de ciencia y arte. Han impulsado la creación de un mural colectivo y la recuperación de espacios públicos.</p></div>
-            <div class='card'><img src='IMG/patrullas.webp' alt='Patrullas Ambientales'><h4>Patrullas Ambientales Comunitarias</h4><p>Vecinos organizados monitorean y reportan problemas ambientales como tiraderos clandestinos o contaminación de cuerpos de agua. Han logrado la recuperación de espacios verdes y la limpieza de ríos.</p></div>
-            <div class='card'><img src='IMG/observatorio.jpg' alt='Observatorio Ciudadano'><h4>Observatorio Ciudadano</h4><p>Grupo que da seguimiento al desempeño del gobierno municipal y publica informes trimestrales sobre cumplimiento de metas. Promueven la transparencia y la rendición de cuentas, y han capacitado a jóvenes en temas de participación.</p></div>
+            <div class='card'><img src='consejo_j.webp' alt='Consejo Juvenil'><h4>Consejo Juvenil Municipal</h4><p>Espacio donde jóvenes de 15 a 29 años proponen proyectos e inciden en políticas públicas locales. En 2023 lograron la creación de un centro cultural juvenil y la organización de ferias de ciencia y arte. Han impulsado la creación de un mural colectivo y la recuperación de espacios públicos.</p></div>
+            <div class='card'><img src='patrullas.webp' alt='Patrullas Ambientales'><h4>Patrullas Ambientales Comunitarias</h4><p>Vecinos organizados monitorean y reportan problemas ambientales como tiraderos clandestinos o contaminación de cuerpos de agua. Han logrado la recuperación de espacios verdes y la limpieza de ríos.</p></div>
+            <div class='card'><img src='observatorio.jpg' alt='Observatorio Ciudadano'><h4>Observatorio Ciudadano</h4><p>Grupo que da seguimiento al desempeño del gobierno municipal y publica informes trimestrales sobre cumplimiento de metas. Promueven la transparencia y la rendición de cuentas, y han capacitado a jóvenes en temas de participación.</p></div>
         </div>
     </div>`,
     // Participación desde la Juventud
