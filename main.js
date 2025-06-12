@@ -1,0 +1,420 @@
+// main.js
+// Revista digital sencilla sin librerías externas
+
+// 1. Define el contenido de cada página (puedes expandirlo o dividirlo más si lo deseas)
+const pages = [
+    // Portada
+    `<div class='magazine-page portada'>
+        <h1>Raíces y Futuro</h1>
+        <h2>Diversidad Cultural y Participación Ciudadana en el Estado de México</h2>
+        <img src='IMG/frame.png' alt='Código QR' width='90' height='90' style='margin: 24px auto;'>
+        <p class='subtitle'>Revista Digital de Ciencias Sociales II</p>
+        <hr style="border: none; border-top: 2px solid #fff; width: 60%; margin: 2em auto 1em auto;">
+        <p style="font-size:1.1em; font-style:italic; margin-top:1.5em;">“La diversidad cultural es la riqueza de los pueblos, el puente entre el pasado y el futuro.”</p>
+        <p style="margin-top:2em;font-size:1.05em;">Edición especial dedicada a la exploración de la identidad, la memoria y la participación social en el Estado de México.</p>
+    </div>`,
+    // Bienvenida y galería
+    `<div class='magazine-page'>
+        <h2>¡Bienvenidos a la revista!</h2>
+        <p style="font-size:1.1em;">Explora la riqueza cultural de los pueblos originarios y afrodescendientes en el Estado de México, con especial enfoque en Jilotepec. Descubre cómo la democracia participativa y la ciudadanía activa están transformando nuestras comunidades.</p>
+        <div style='display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin:2em 0;'>
+            <div style="background:#f7faff;border-radius:10px;padding:10px 8px;box-shadow:0 1px 6px rgba(44,62,80,0.08);width:130px;">
+                <img src='IMG/1.jpg' alt='Cultura Indígena' style='width:100%;border-radius:8px;'>
+                <div style='text-align:center;font-size:0.95em;margin-top:0.5em;'>Diversidad cultural</div>
+            </div>
+            <div style="background:#f7faff;border-radius:10px;padding:10px 8px;box-shadow:0 1px 6px rgba(44,62,80,0.08);width:130px;">
+                <img src='IMG/tradiciones.jpg' alt='Tradiciones' style='width:100%;border-radius:8px;'>
+                <div style='text-align:center;font-size:0.95em;margin-top:0.5em;'>Tradiciones y costumbres</div>
+            </div>
+            <div style="background:#f7faff;border-radius:10px;padding:10px 8px;box-shadow:0 1px 6px rgba(44,62,80,0.08);width:130px;">
+                <img src='IMG/participacionciudadana.webp' alt='Participación Ciudadana' style='width:100%;border-radius:8px;'>
+                <div style='text-align:center;font-size:0.95em;margin-top:0.5em;'>Participación ciudadana</div>
+            </div>
+        </div>
+        <hr class="section-sep">
+        <div style="margin-top:2em;">
+            <p><b>¿Qué encontrarás en esta edición?</b></p>
+            <ul style="margin-left:1.2em;">
+                <li>Un recorrido por los pueblos indígenas y afrodescendientes del Estado de México.</li>
+                <li>Historias, costumbres y tradiciones que dan vida a la región.</li>
+                <li>Ejemplos de participación ciudadana y democracia comunitaria.</li>
+                <li>Reflexiones sobre el papel de la juventud y la importancia de la identidad cultural.</li>
+            </ul>
+        </div>
+        <hr class="section-sep">
+        <p style="text-align:center;font-size:1.05em;color:#2d6cdf;margin-top:2em;">¡Comienza a hojear y déjate sorprender! 📖✨</p>
+    </div>`,
+    // Índice
+    `<div class='magazine-page'>
+        <h3 class='index-title'>Índice de Contenidos</h3>
+        <ul class='index-list' style='columns:1;'>
+            <li>🌽 Pueblos Indígenas en el Estado de México</li>
+            <li>🧑‍🌾 Otomíes (Hñahñú)</li>
+            <li>🌄 Nahuas</li>
+            <li>🧵 Mazahuas</li>
+            <li> Pueblos Afrodescendientes</li>
+            <li>🎉 Costumbres y Tradiciones</li>
+            <li>💃 Danzas Tradicionales</li>
+            <li>👗 Vestimenta Típica</li>
+            <li>🤝 Influencia en la Organización Social</li>
+            <li>🗳️ Democracia Participativa</li>
+            <li>🏡 Caso: San Lorenzo Oltepec</li>
+            <li>🙋‍♂️ Participación Ciudadana</li>
+            <li>🧑‍🎓 Participación Juvenil</li>
+        </ul>
+        <hr class="section-sep">
+        <div style="margin-top:1.5em;">
+            <p style="color:#3a4a6b;font-size:1em;">Navega usando los botones y disfruta cada página. <br>Recuerda que cada sección está pensada para inspirar, informar y motivar la participación.</p>
+        </div>
+    </div>`,
+    // Pueblos Indígenas - Introducción
+    `<div class='magazine-page'>
+        <h2>🌽 Pueblos Indígenas en el Estado de México</h2>
+        <blockquote style="background:#eaf1fb;padding:1em 1.5em;border-left:4px solid #2d6cdf;border-radius:8px;font-style:italic;">“Nuestros pueblos originarios son guardianes de la memoria, la lengua y la tierra.”</blockquote>
+        <p>El Estado de México es hogar de una gran diversidad de pueblos originarios, cada uno con su propia lengua, cosmovisión y tradiciones. Entre los más representativos se encuentran los otomíes, nahuas y mazahuas, quienes han resistido el paso del tiempo y la modernidad, manteniendo vivas sus raíces.</p>
+        <div style="margin-top:1.2em;">
+            <b>¿Sabías que...?</b>
+            <ul>
+                <li>En el Estado de México se hablan al menos 5 lenguas indígenas.</li>
+                <li>Las fiestas patronales y los rituales agrícolas siguen siendo parte fundamental de la vida comunitaria.</li>
+                <li>La transmisión oral de historias y leyendas es clave para preservar la identidad.</li>
+            </ul>
+        </div>
+    </div>`,
+    // Otomíes
+    `<div class='magazine-page'>
+        <h3>🧑‍🌾 Otomíes (Hñahñú)</h3>
+        <img src='IMG/comunidad_otomi.jpg' alt='Comunidad Otomí'>
+        <p>Los otomíes, que se autodenominan Hñahñú, son uno de los pueblos indígenas más numerosos del Estado de México. Su lengua pertenece a la familia otomangue y cuenta con variantes dialectales.</p>
+        <h4>Ubicación</h4>
+        <p>Principalmente en los municipios de Temoaya, Acambay, Jilotepec y Villa del Carbón. En Jilotepec, comunidades como San Lorenzo Octeyuco mantienen vivas sus tradiciones.</p>
+        <h4>Cultura y Cosmovisión</h4>
+        <p>La cosmovisión otomí gira en torno a la dualidad: frío/caliente, masculino/femenino, vida/muerte. El maíz es sagrado y está presente en rituales, fiestas y la alimentación diaria. La música, la danza y la medicina tradicional son pilares de su vida comunitaria.</p>
+        <h4>Aportaciones</h4>
+        <ul>
+            <li>🌱 Técnicas agrícolas tradicionales como la milpa, que promueve la biodiversidad.</li>
+            <li>🧶 Artesanías en lana, textiles bordados y cerámica con símbolos ancestrales.</li>
+            <li>🌿 Medicina tradicional basada en plantas y saberes transmitidos por generaciones.</li>
+            <li>🌎 Filosofía de respeto y equilibrio con la naturaleza.</li>
+        </ul>
+        <h4>Desafíos Actuales</h4>
+        <p>La migración, la discriminación y la pérdida de la lengua entre los jóvenes son retos importantes. Sin embargo, proyectos de educación bilingüe y turismo cultural están revitalizando la identidad otomí.</p>
+        <hr class="section-sep">
+        <p style="font-size:0.98em;color:#3a4a6b;">“El que no sabe de dónde viene, difícilmente sabrá hacia dónde va.”</p>
+    </div>`,
+    // Nahuas
+    `<div class='magazine-page'>
+        <h3>🌄 Nahuas</h3>
+        <img src='IMG/comunidad_nahua.jpg' alt='Comunidad Nahua'>
+        <p>Los nahuas son descendientes directos de los mexicas y otros pueblos que hablaban náhuatl en el período prehispánico. Su lengua, el náhuatl, es la indígena con más hablantes en México.</p>
+        <h4>Ubicación</h4>
+        <p>En el Estado de México se concentran en municipios como Texcoco, Chimalhuacán y Valle de Chalco. En Jilotepec hay presencia en comunidades rurales.</p>
+        <h4>Cultura y Cosmovisión</h4>
+        <p>La relación con la naturaleza y el ciclo agrícola es central. El calendario ritual nahua combina elementos prehispánicos y católicos. La música, la danza y la gastronomía (como el mole y los tamales) son expresiones vivas de su identidad.</p>
+        <h4>Aportaciones</h4>
+        <ul>
+            <li>🍲 Gastronomía tradicional: mole, tamales, atole y tlacoyos.</li>
+            <li>🌿 Herbolaria y medicina tradicional, con un vasto conocimiento de plantas.</li>
+            <li>🪶 Arte plumario, alfarería y elaboración de máscaras para fiestas.</li>
+            <li>🤲 Sistema de cargos comunitarios (tequio) y asambleas para la toma de decisiones.</li>
+        </ul>
+        <h4>Desafíos Actuales</h4>
+        <p>La presión sobre sus tierras, la contaminación y la migración afectan la preservación de sus tradiciones. Talleres de lengua y ferias culturales buscan fortalecer la identidad nahua.</p>
+        <hr class="section-sep">
+        <p style="font-size:0.98em;color:#3a4a6b;">Dato curioso: El náhuatl es una de las lenguas originarias más estudiadas en universidades de todo el mundo.</p>
+    </div>`,
+    // Mazahuas
+    `<div class='magazine-page'>
+        <h3>🧵 Mazahuas</h3>
+        <img src='IMG/comunidad_mazahua.webp' alt='Comunidad Mazahua'>
+        <p>Los mazahuas son un pueblo indígena cuya lengua pertenece a la familia otomangue. Son conocidos por su rica tradición textil y su profunda conexión con la tierra.</p>
+        <h4>Ubicación</h4>
+        <p>Principalmente en la región noroccidental del Estado de México, en municipios como San Felipe del Progreso, Donato Guerra y Villa Victoria. En Jilotepec hay comunidades en zonas rurales.</p>
+        <h4>Cultura y Cosmovisión</h4>
+        <p>El maíz, el agua y la tierra son elementos sagrados. Celebran ceremonias agrícolas, peticiones de lluvia y fiestas patronales con música y danzas. La vestimenta mazahua es famosa por sus bordados coloridos y símbolos de protección.</p>
+        <h4>Aportaciones</h4>
+        <ul>
+            <li>🧵 Textiles bordados con motivos tradicionales y colores vivos.</li>
+            <li>🎶 Música y danzas como la Danza de los Concheros y la Danza de los Arcos.</li>
+            <li>🏠 Arquitectura tradicional con adobe, madera y techos de dos aguas.</li>
+            <li>🌲 Conocimiento ecológico sobre manejo de bosques y agua.</li>
+        </ul>
+        <h4>Desafíos Actuales</h4>
+        <p>La explotación de recursos, la migración y la apropiación cultural de sus diseños son retos actuales. Colectivos de artesanas luchan por el reconocimiento y la protección de su patrimonio.</p>
+        <hr class="section-sep">
+        <p style="font-size:0.98em;color:#3a4a6b;">¿Sabías que...? El rebozo mazahua es una de las prendas más representativas de la región.</p>
+    </div>`,
+    // Pueblos Afrodescendientes - Introducción
+    `<div class='magazine-page'>
+        <h2> Pueblos Afrodescendientes en el Estado de México</h2>
+        <blockquote style="background:#eaf1fb;padding:1em 1.5em;border-left:4px solid #2d6cdf;border-radius:8px;font-style:italic;">“La historia afrodescendiente es también la historia de México.”</blockquote>
+        <p>Las comunidades afrodescendientes han estado presentes en México desde el siglo XVI. Aunque menos visibilizadas, han aportado música, gastronomía, danzas y saberes que enriquecen la cultura nacional.</p>
+        <div style="margin-top:1.2em;">
+            <b>¿Sabías que...?</b>
+            <ul>
+                <li>En 2020, el INEGI reconoció oficialmente a la población afrodescendiente en el censo nacional.</li>
+                <li>La música de raíz africana, como el son jarocho y la chilena, es parte del patrimonio sonoro de México.</li>
+                <li>Las comunidades afrodescendientes han desarrollado técnicas únicas para la fabricación de instrumentos musicales.</li>
+            </ul>
+        </div>
+    </div>`,
+    // Afrodescendientes: Presencia
+    `<div class='magazine-page'>
+        <h3>Presencia Afrodescendiente</h3>
+        <img src='IMG/comunidad_afro.avif' alt='Comunidad Afrodescendiente'>
+        <p>Según el INEGI, en el Estado de México hay aproximadamente <b>150,000 personas</b> que se reconocen como afrodescendientes, principalmente en municipios como Cuautla y algunas zonas de Puebla cercanas al estado.</p>
+        <div style="margin-top:1.2em;">
+            <b>Principales aportaciones:</b>
+            <ul>
+                <li>La chilena y el son jarocho, géneros musicales con raíces africanas.</li>
+                <li>Platillos como el arroz con coco y el uso del plátano macho en la cocina.</li>
+                <li>Elaboración de máscaras y danzas con ritmos africanos.</li>
+            </ul>
+        </div>
+    </div>`,
+    // Afrodescendientes: Historia y aportaciones
+    `<div class='magazine-page'>
+        <h4>Historia</h4>
+        <p>Los primeros africanos llegaron como esclavos durante la colonia, trabajando en minas, haciendas y obrajes. Con el tiempo se mezclaron con indígenas y europeos, pero mantuvieron elementos culturales distintivos.</p>
+        <h4>Aportaciones Culturales</h4>
+        <ul>
+            <li>🎵 Influencia en la música tradicional (son jarocho, chilena, fandango).</li>
+            <li>🍌 Contribuciones a la gastronomía (arroz con coco, plátano macho, técnicas de fritura).</li>
+            <li>💃 Expresiones dancísticas con ritmos africanos y zapateado.</li>
+            <li>📖 Tradiciones orales, cuentos y leyendas transmitidas de generación en generación.</li>
+        </ul>
+        <div style="margin-top:1.2em;">
+            <b>Dato curioso:</b> En la Costa Chica de Guerrero y Oaxaca, las fiestas afrodescendientes son reconocidas por la UNESCO como patrimonio cultural inmaterial.</div>
+    </div>`,
+    // Afrodescendientes: Desafíos y resiliencia
+    `<div class='magazine-page'>
+        <h4>Desafíos Actuales</h4>
+        <p>Discriminación, invisibilización y falta de reconocimiento oficial han sido retos históricos. Sin embargo, desde 2019 el INEGI incluye preguntas sobre afrodescendencia en censos, lo que ayuda a visibilizar a esta población.</p>
+        <h4>Ejemplo de Resiliencia</h4>
+        <p>En Cuautla, la familia Martínez ha mantenido por generaciones la tradición de fabricar instrumentos musicales con técnicas traídas por sus ancestros africanos, adaptándolas a materiales locales. Hoy, sus tambores y marimbas son reconocidos en toda la región.</p>
+        <div style='margin-top:15px;'>
+            <a href='https://www.youtube.com/watch?v=xbNbRjKuQQ4' target='_blank' style="color:#2d6cdf;font-weight:600;">▶️ Ver video sobre afrodescendientes en México</a>
+        </div>
+        <hr class="section-sep">
+        <p style="font-size:0.98em;color:#3a4a6b;">“La resiliencia afrodescendiente es ejemplo de fortaleza y creatividad.”</p>
+    </div>`,
+    // Costumbres y Tradiciones - Introducción
+    `<div class='magazine-page'>
+        <h2>🎉 Costumbres y Tradiciones de las Comunidades</h2>
+        <blockquote style="background:#eaf1fb;padding:1em 1.5em;border-left:4px solid #2d6cdf;border-radius:8px;font-style:italic;">“Las tradiciones son el alma viva de los pueblos.”</blockquote>
+        <p>El Estado de México, y en particular el municipio de Jilotepec, cuenta con un rico patrimonio cultural inmaterial que se manifiesta en fiestas, danzas, vestimenta y gastronomía. Las celebraciones patronales, los carnavales y las ferias son momentos de encuentro y reafirmación de la identidad.</p>
+        <div style="margin-top:1.2em;">
+            <b>Ejemplo:</b> En Jilotepec, la fiesta de San Lorenzo reúne a toda la comunidad en torno a la música, la danza y la comida tradicional.</div>
+    </div>`,
+    // Danzas Tradicionales
+    `<div class='magazine-page'>
+        <h3>💃 Danzas Tradicionales</h3>
+        <div class='card-container'>
+            <div class='card'>
+                <img src='IMG/danza_concheros.jpg' alt='Danza de los Concheros'>
+                <h4>Danza de los Concheros</h4>
+                <p>Practicada por comunidades otomíes y mazahuas, esta danza ritual combina elementos prehispánicos y cristianos. Los danzantes usan trajes elaborados y se acompañan con instrumentos de cuerda hechos con caparazones de armadillo.</p>
+            </div>
+            <div class='card'>
+                <img src='IMG/danza_arcos.jpg' alt='Danza de los Arcos'>
+                <h4>Danza de los Arcos</h4>
+                <p>Característica de las fiestas patronales en Jilotepec, donde los danzantes tejen y destejen figuras con arcos floridos mientras avanzan al ritmo de la música. Simboliza la unión comunitaria y la alegría colectiva.</p>
+            </div>
+        </div>
+        <div style="margin-top:1.2em;">
+            <b>Dato:</b> Las danzas tradicionales no solo son espectáculo, sino también ofrenda y agradecimiento a la tierra y los ancestros.</div>
+    </div>`,
+    // Vestimenta Típica
+    `<div class='magazine-page'>
+        <h3>👗 Vestimenta Típica</h3>
+        <div style='display:flex;gap:18px;flex-wrap:wrap;justify-content:center;'>
+            <div style="background:#f7faff;border-radius:10px;padding:10px 8px;box-shadow:0 1px 6px rgba(44,62,80,0.08);width:120px;">
+                <img src='IMG/mujer_mazahua.jpg' alt='Mujer Mazahua' style='width:100%;border-radius:8px;'>
+                <div style='text-align:center;font-size:0.95em;margin-top:0.5em;'>Vestimenta Mazahua</div>
+            </div>
+            <div style="background:#f7faff;border-radius:10px;padding:10px 8px;box-shadow:0 1px 6px rgba(44,62,80,0.08);width:120px;">
+                <img src='IMG/hombre_otomi.avif' alt='Hombre Otomí' style='width:100%;border-radius:8px;'>
+                <div style='text-align:center;font-size:0.95em;margin-top:0.5em;'>Vestimenta Otomí</div>
+            </div>
+            <div style="background:#f7faff;border-radius:10px;padding:10px 8px;box-shadow:0 1px 6px rgba(44,62,80,0.08);width:120px;">
+                <img src='IMG/bordados_tradicionales.jpg' alt='Bordados Tradicionales' style='width:100%;border-radius:8px;'>
+                <div style='text-align:center;font-size:0.95em;margin-top:0.5em;'>Bordados Tradicionales</div>
+            </div>
+        </div>
+        <p style="margin-top:1.5em;">La indumentaria tradicional refleja identidad, estatus y ocasiones especiales, además de ser un testimonio de habilidades artesanales. Los bordados, colores y formas cuentan historias y transmiten valores.</p>
+        <div style="margin-top:1.2em;">
+            <b>Dato:</b> El rebozo mazahua y el quechquémitl otomí son prendas emblemáticas reconocidas a nivel nacional.</div>
+    </div>`,
+    // Influencia en la Organización Social
+    `<div class='magazine-page'>
+        <h3>🤝 Influencia en la Organización Social</h3>
+        <h4>Influencias Positivas</h4>
+        <ul>
+            <li>💪 <b>Fortalecimiento de identidad:</b> Las tradiciones unen a la comunidad alrededor de valores compartidos y refuerzan el sentido de pertenencia.</li>
+            <li>👵 <b>Transmisión intergeneracional:</b> Los mayores enseñan a los jóvenes su herencia cultural a través de relatos, talleres y fiestas.</li>
+            <li>💰 <b>Economía local:</b> La producción artesanal y el turismo cultural generan ingresos y empleo.</li>
+            <li>🧑‍🤝‍🧑 <b>Gobernanza comunitaria:</b> Sistemas como el tequio y la mayordomía organizan el trabajo colectivo y la toma de decisiones.</li>
+        </ul>
+        <h4>Influencias Negativas</h4>
+        <ul>
+            <li>💸 <b>Costos económicos:</b> Los cargos festivos pueden representar gastos excesivos para familias.</li>
+            <li>🚻 <b>Roles de género:</b> Algunas tradiciones perpetúan desigualdades entre hombres y mujeres, limitando la participación femenina.</li>
+            <li>⛔ <b>Resistencia al cambio:</b> En algunos casos, se rechazan innovaciones que podrían mejorar condiciones de vida.</li>
+            <li>🎭 <b>Folklorización:</b> Reducción de culturas vivas a espectáculos para turistas, perdiendo su sentido profundo.</li>
+        </ul>
+        <div style="margin-top:1.2em;">
+            <b>Reflexión:</b> El reto es mantener vivas las tradiciones, adaptándolas a los nuevos tiempos sin perder su esencia.</div>
+    </div>`,
+    // Democracia Participativa - Introducción
+    `<div class='magazine-page'>
+        <h2>🗳️ Democracia Participativa en las Comunidades</h2>
+        <blockquote style="background:#eaf1fb;padding:1em 1.5em;border-left:4px solid #2d6cdf;border-radius:8px;font-style:italic;">“La democracia se construye con la voz y la acción de todos.”</blockquote>
+        <p>La democracia participativa va más allá del voto, involucrando a los ciudadanos en la toma de decisiones sobre asuntos que afectan sus vidas cotidianas. En las comunidades indígenas y rurales, la asamblea y el consenso son prácticas ancestrales de autogobierno.</p>
+        <div style="margin-top:1.2em;">
+            <b>Ejemplo:</b> En muchas comunidades, el presupuesto participativo permite decidir en qué se invierte el dinero público.</div>
+    </div>`,
+    // Democracia Participativa - Mecanismos
+    `<div class='magazine-page'>
+        <h3>¿Qué es la Democracia Participativa?</h3>
+        <p>Es un modelo de organización política donde los ciudadanos tienen un papel activo y directo en las decisiones públicas, a través de mecanismos como:</p>
+        <ul>
+            <li>👥 Comités Vecinales: Grupos de vecinos que identifican y priorizan necesidades.</li>
+            <li>💰 Presupuesto Participativo: Los ciudadanos deciden cómo se gasta parte del presupuesto municipal.</li>
+            <li>🗣️ Asambleas Comunitarias: Espacios abiertos para debatir y votar temas relevantes.</li>
+            <li>🌳 Jornadas Comunitarias: Acciones colectivas para mejorar el entorno, como limpieza y reforestación.</li>
+            <li>📋 Consultas Ciudadanas: Votaciones sobre proyectos o problemas específicos.</li>
+            <li>🧑‍⚖️ Consejos Ciudadanos: Órganos consultivos que supervisan y asesoran a las autoridades.</li>
+        </ul>
+        <div style="margin-top:1.2em;">
+            <b>Dato:</b> La democracia participativa fortalece la confianza y la corresponsabilidad social.</div>
+    </div>`,
+    // Democracia Participativa - Ejemplos visuales
+    `<div class='magazine-page'>
+        <div class='card-container'>
+            <div class='card'><img src='IMG/comites_vecinales.jpg' alt='Comités Vecinales'><h4>Comités Vecinales</h4><p>Organizaciones de base donde los residentes discuten y priorizan necesidades de su colonia o comunidad. Fomentan la solidaridad y la cooperación.</p></div>
+            <div class='card'><img src='IMG/presupuesto_par.webp' alt='Presupuesto Participativo'><h4>Presupuesto Participativo</h4><p>Proceso mediante el cual los ciudadanos deciden directamente cómo asignar parte del presupuesto público. Ejemplo: elegir entre pavimentar calles o mejorar la escuela.</p></div>
+            <div class='card'><img src='IMG/asambleas.webp' alt='Asambleas Comunitarias'><h4>Asambleas Comunitarias</h4><p>Reuniones donde todos los miembros de una comunidad pueden expresar su opinión y votar sobre temas relevantes. Son la base de la democracia directa.</p></div>
+            <div class='card'><img src='IMG/jornada_limpieza.jpg' alt='Jornadas de Limpieza'><h4>Jornadas Comunitarias</h4><p>Acciones colectivas para mejorar el entorno, como limpieza, reforestación o mantenimiento de espacios públicos. Fortalecen el sentido de pertenencia.</p></div>
+            <div class='card'><img src='IMG/consultas.jpg' alt='Consultas Ciudadanas'><h4>Consultas Ciudadanas</h4><p>Mecanismos formales donde los ciudadanos pueden votar y opinar sobre proyectos específicos que impactan a su comunidad.</p></div>
+            <div class='card'><img src='IMG/consejos.jpg' alt='Consejos Ciudadanos'><h4>Consejos Ciudadanos</h4><p>Órganos consultivos formados por vecinos que supervisan y asesoran en la implementación de políticas públicas locales.</p></div>
+        </div>
+    </div>`,
+    // Caso: San Lorenzo Oltepec
+    `<div class='magazine-page'>
+        <h3>🏡 Caso: San Lorenzo Oltepec</h3>
+        <ul>
+            <li><b>2018 - Diagnóstico Comunitario:</b> Mediante asambleas, identificaron como prioridades el mantenimiento del pozo de agua y la mejora de la escuela primaria.</li>
+            <li><b>2019 - Presupuesto Participativo:</b> Asignaron el 30% del presupuesto municipal a estas obras, con seguimiento ciudadano a la ejecución.</li>
+            <li><b>2020 - Jornadas de Limpieza:</b> Organizaron brigadas mensuales para mantener limpios los espacios públicos, con participación de todas las edades.</li>
+            <li><b>2021 - Comité de Vigilancia:</b> Crearon un grupo ciudadano para supervisar que las obras se realizaran conforme a lo acordado.</li>
+            <li><b>2022 - Resultados:</b> Pozo rehabilitado que beneficia a 120 familias, escuela con aulas renovadas, y mayor cohesión comunitaria.</li>
+        </ul>
+        <hr class="section-sep">
+        <div style="margin-top:1.2em;">
+            <b>Reflexión:</b> La participación ciudadana puede transformar realidades y mejorar la calidad de vida de toda una comunidad.</div>
+    </div>`,
+    // Participación Ciudadana - Introducción
+    `<div class='magazine-page'>
+        <h2>🙋‍♂️ Participación Ciudadana en Jilotepec</h2>
+        <blockquote style="background:#eaf1fb;padding:1em 1.5em;border-left:4px solid #2d6cdf;border-radius:8px;font-style:italic;">“La ciudadanía activa es la base de una sociedad justa y solidaria.”</blockquote>
+        <p>La participación ciudadana es el involucramiento activo de los individuos en procesos políticos, sociales y culturales que afectan sus comunidades. En Jilotepec, la colaboración entre vecinos ha permitido crear proyectos innovadores y fortalecer la democracia local.</p>
+        <div style="margin-top:1.2em;">
+            <b>Ejemplo:</b> El Consejo Juvenil Municipal impulsa actividades culturales, deportivas y de protección ambiental.</div>
+    </div>`,
+    // Participación Ciudadana - Mecanismos
+    `<div class='magazine-page'>
+        <h3>¿Qué es la Participación Ciudadana?</h3>
+        <p>Es el derecho y deber de los ciudadanos de intervenir en las decisiones públicas, ya sea a través de mecanismos institucionales o de organización comunitaria. Incluye:</p>
+        <ul>
+            <li>🗳️ Votar en elecciones para elegir autoridades.</li>
+            <li>📋 Participar en consultas públicas sobre obras y servicios.</li>
+            <li>🧑‍⚖️ Integrar consejos ciudadanos y comités de vigilancia.</li>
+            <li>🗣️ Asistir a asambleas y reuniones vecinales.</li>
+            <li>🤲 Organizar iniciativas comunitarias, como campañas de limpieza o reforestación.</li>
+            <li>👀 Vigilar el desempeño de autoridades y exigir transparencia.</li>
+        </ul>
+        <div style="margin-top:1.2em;">
+            <b>Dato:</b> La participación ciudadana fortalece la democracia y promueve la corresponsabilidad social.</div>
+    </div>`,
+    // Participación Ciudadana - Ejemplos
+    `<div class='magazine-page'>
+        <h3>Ejemplos en Jilotepec</h3>
+        <div class='card-container'>
+            <div class='card'><img src='IMG/consejo_j.webp' alt='Consejo Juvenil'><h4>Consejo Juvenil Municipal</h4><p>Espacio donde jóvenes de 15 a 29 años proponen proyectos e inciden en políticas públicas locales. En 2023 lograron la creación de un centro cultural juvenil y la organización de ferias de ciencia y arte.</p></div>
+            <div class='card'><img src='IMG/patrullas.webp' alt='Patrullas Ambientales'><h4>Patrullas Ambientales Comunitarias</h4><p>Vecinos organizados monitorean y reportan problemas ambientales como tiraderos clandestinos o contaminación de cuerpos de agua. Han logrado la recuperación de espacios verdes.</p></div>
+            <div class='card'><img src='IMG/observatorio.jpg' alt='Observatorio Ciudadano'><h4>Observatorio Ciudadano</h4><p>Grupo que da seguimiento al desempeño del gobierno municipal y publica informes trimestrales sobre cumplimiento de metas. Promueven la transparencia y la rendición de cuentas.</p></div>
+        </div>
+    </div>`,
+    // Participación desde la Juventud
+    `<div class='magazine-page'>
+        <h3>🧑‍🎓 Participación desde la Juventud</h3>
+        <ul>
+            <li>🌐 <b>Redes Sociales:</b> Crean grupos para discutir problemas locales y organizar acciones. Ejemplo: campaña <span style="color:#2d6cdf;font-weight:600;">#JilotepecLimpio</span> que convocó a 200 voluntarios y logró limpiar 5 parques.</li>
+            <li>🎨 <b>Arte Urbano:</b> Murales con mensajes sociales en espacios públicos, autorizados por el ayuntamiento mediante un programa de participación. Los murales embellecen la ciudad y transmiten valores.</li>
+            <li>🌱 <b>Huertos Escolares:</b> Estudiantes de secundaria gestionaron y mantuvieron huertos que proveían verduras para el comedor escolar, promoviendo la alimentación saludable y el trabajo en equipo.</li>
+            <li>🎙️ <b>Podcast Comunitario:</b> “Voces de mi Pueblo”, producido por jóvenes, difunde problemáticas locales, entrevista a autoridades y promueve la participación juvenil.</li>
+        </ul>
+        <hr class="section-sep">
+        <div style="margin-top:1.2em;">
+            <b>Reflexión:</b> La juventud es motor de cambio y esperanza. Su creatividad y energía son clave para construir un mejor futuro.</div>
+    </div>`,
+    // Créditos
+    `<div class='magazine-page credits'>
+        <h3>Créditos</h3>
+        <p>Proyecto escolar de Ciencias Sociales II - Parcial III</p>
+        <p>Profesora: Mariana Balladares Rico</p>
+        <p>Grupo: 401 - Semestre: Segundo</p>
+        <p>Valor: 130 puntos (30% de la calificación)</p>
+        <hr class="section-sep">
+        <p style="font-size:1.1em;color:#2d6cdf;margin-top:1.5em;">Gracias por leer y ser parte del cambio. <br>¡Sigue explorando, aprendiendo y participando! 🌎🤝</p>
+        <div style="margin-top:2em;font-size:0.98em;color:#3a4a6b;">“La cultura no es un lujo, es una necesidad del espíritu.” – José Vasconcelos</div>
+    </div>`
+];
+
+// 2. Lógica de navegación y animación
+let currentPage = 0;
+const magazine = document.getElementById('magazine');
+const pageIndicator = document.getElementById('pageIndicator');
+const prevBtn = document.getElementById('prevPage');
+const nextBtn = document.getElementById('nextPage');
+
+function renderPage(newPage, direction = 0) {
+    magazine.innerHTML = '';
+    const pageDiv = document.createElement('div');
+    pageDiv.innerHTML = pages[newPage];
+    const pageContent = pageDiv.firstElementChild;
+    pageContent.classList.add('active');
+    magazine.appendChild(pageContent);
+    if (direction === 1) {
+        pageContent.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            pageContent.style.transition = 'all 0.5s cubic-bezier(.77,0,.18,1)';
+            pageContent.style.transform = 'translateX(0)';
+        }, 10);
+    } else if (direction === -1) {
+        pageContent.style.transform = 'translateX(-100%)';
+        setTimeout(() => {
+            pageContent.style.transition = 'all 0.5s cubic-bezier(.77,0,.18,1)';
+            pageContent.style.transform = 'translateX(0)';
+        }, 10);
+    }
+    pageIndicator.textContent = `Página ${newPage + 1} de ${pages.length}`;
+    prevBtn.disabled = newPage === 0;
+    nextBtn.disabled = newPage === pages.length - 1;
+}
+
+prevBtn.addEventListener('click', () => {
+    if (currentPage > 0) {
+        currentPage--;
+        renderPage(currentPage, -1);
+    }
+});
+nextBtn.addEventListener('click', () => {
+    if (currentPage < pages.length - 1) {
+        currentPage++;
+        renderPage(currentPage, 1);
+    }
+});
+
+renderPage(currentPage, 0);
+
